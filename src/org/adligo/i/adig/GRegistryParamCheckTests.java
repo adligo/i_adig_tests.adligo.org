@@ -97,9 +97,9 @@ public class GRegistryParamCheckTests extends ATest {
 					InvokerRequestException.class ,c.getClass() );
 			x = (InvokerRequestException) c;
 		}
-		assertEquals("Your call to the GRegistry's method " + GRegistry.GET_CHECKED_INVOKER_METHOD_NAME +
-				" obtained a  null for key 'somePlugin', please put something in the GRegistry for this key.", x.getMessage());
+		assertNotNull(theInvoker);
 		
+		GRegistry.removeCheckedInvoker("somePlugin");
 		GRegistry.addCheckedInvoker("somePlugin", new MockGCheckedInvokerWithImpls());
 		
 		//check the class with impls can be obtained as interfaces (casting up)
@@ -204,9 +204,9 @@ public class GRegistryParamCheckTests extends ATest {
 					InvokerRequestException.class ,c.getClass() );
 			x = (InvokerRequestException) c;
 		}
-		assertEquals("Your call to the GRegistry's method " + GRegistry.GET_INVOKER_METHOD_NAME +
-				" obtained a  null for key 'somePlugin', please put something in the GRegistry for this key.", x.getMessage());
+		assertNotNull(theInvoker);
 		
+		GRegistry.removeInvoker("somePlugin");
 		GRegistry.addInvoker("somePlugin", new MockGInvokerWithImpls());
 		
 		//check the class with impls can be obtained as interfaces (casting up)
