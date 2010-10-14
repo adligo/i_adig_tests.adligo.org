@@ -99,7 +99,7 @@ public class GRegistryParamCheckTests extends ATest {
 		}
 		assertNotNull(theInvoker);
 		
-		GRegistry.removeCheckedInvoker("somePlugin");
+		GRegistry.deleteCheckedInvoker("somePlugin");
 		GRegistry.addCheckedInvoker("somePlugin", new MockGCheckedInvokerWithImpls());
 		
 		//check the class with impls can be obtained as interfaces (casting up)
@@ -206,7 +206,7 @@ public class GRegistryParamCheckTests extends ATest {
 		}
 		assertNotNull(theInvoker);
 		
-		GRegistry.removeInvoker("somePlugin");
+		GRegistry.deleteInvoker("somePlugin");
 		GRegistry.addInvoker("somePlugin", new MockGInvokerWithImpls());
 		
 		//check the class with impls can be obtained as interfaces (casting up)
