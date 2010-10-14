@@ -1,6 +1,6 @@
 package org.adligo.i.adig;
 
-public class TestGRegistry {
+public class MockGRegistry {
 
 	public static synchronized void removeCheckedInvoker(String key){
 		GRegistry.removeCheckedInvoker(key);
