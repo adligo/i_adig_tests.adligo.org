@@ -106,12 +106,6 @@ public class GRegistryParamCheckTests extends ATest {
 		MockGRegistry.deleteCheckedInvoker("somePlugin");
 		GRegistry.addCheckedInvoker("somePlugin", new MockGCheckedInvokerWithImpls());
 		
-		//check the class with impls can be obtained as interfaces (casting up)
-		theInvoker = 
-			GRegistry.getCheckedInvoker("somePlugin", I_MockParam.class, I_MockReturn.class);
-		@SuppressWarnings("unused")
-		I_GCheckedInvoker<MockParam, MockReturn>  theInvoker3 = 
-			GRegistry.getCheckedInvoker("somePlugin", MockParam.class, MockReturn.class);
 	}
 	
 	
@@ -213,11 +207,5 @@ public class GRegistryParamCheckTests extends ATest {
 		MockGRegistry.deleteInvoker("somePlugin");
 		GRegistry.addInvoker("somePlugin", new MockGInvokerWithImpls());
 		
-		//check the class with impls can be obtained as interfaces (casting up)
-		theInvoker = 
-			GRegistry.getInvoker("somePlugin", I_MockParam.class, I_MockReturn.class);
-		@SuppressWarnings("unused")
-		I_GInvoker<MockParam, MockReturn>  theInvoker3 = 
-			GRegistry.getInvoker("somePlugin", MockParam.class, MockReturn.class);
 	}
 }
