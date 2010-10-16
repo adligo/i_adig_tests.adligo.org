@@ -1,5 +1,8 @@
 package org.adligo.i.adig;
 
+import org.adligo.i.adig.client.BaseGInvoker;
+import org.adligo.i.adig.client.I_GInvoker;
+
 public class MockGClock extends BaseGInvoker implements I_GInvoker<Object, Long> {
 	public static final MockGClock INSTANCE = new MockGClock();
 	

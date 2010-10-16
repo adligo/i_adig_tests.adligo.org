@@ -1,5 +1,9 @@
 package org.adligo.i.adig;
 
+import org.adligo.i.adig.client.GRegistry;
+import org.adligo.i.adig.client.I_GCheckedInvoker;
+import org.adligo.i.adig.client.I_GInvoker;
+import org.adligo.i.adig.client.InvokerRequestException;
 import org.adligo.tests.ATest;
 
 public class GRegistryParamCheckTests extends ATest {
@@ -86,7 +90,7 @@ public class GRegistryParamCheckTests extends ATest {
 						"I_GCheckedInvoker<org.adligo.i.adig.I_MockParam,org.adligo.i.adig.MockReturn, " +
 						"please fix your coding error or talk to your architect. ", 
 				x.getMessage() );
-		GRegistry.removeCheckedInvoker("somePlugin");
+		MockGRegistry.removeCheckedInvoker("somePlugin");
 		
 		x = null;
 		try {
@@ -99,7 +103,7 @@ public class GRegistryParamCheckTests extends ATest {
 		}
 		assertNotNull(theInvoker);
 		
-		GRegistry.deleteCheckedInvoker("somePlugin");
+		MockGRegistry.deleteCheckedInvoker("somePlugin");
 		GRegistry.addCheckedInvoker("somePlugin", new MockGCheckedInvokerWithImpls());
 		
 		//check the class with impls can be obtained as interfaces (casting up)
@@ -193,7 +197,7 @@ public class GRegistryParamCheckTests extends ATest {
 						"I_GInvoker<org.adligo.i.adig.I_MockParam,org.adligo.i.adig.MockReturn, " +
 						"please fix your coding error or talk to your architect. ", 
 				x.getMessage() );
-		GRegistry.removeInvoker("somePlugin");
+		MockGRegistry.removeInvoker("somePlugin");
 		
 		x = null;
 		try {
@@ -206,7 +210,7 @@ public class GRegistryParamCheckTests extends ATest {
 		}
 		assertNotNull(theInvoker);
 		
-		GRegistry.deleteInvoker("somePlugin");
+		MockGRegistry.deleteInvoker("somePlugin");
 		GRegistry.addInvoker("somePlugin", new MockGInvokerWithImpls());
 		
 		//check the class with impls can be obtained as interfaces (casting up)

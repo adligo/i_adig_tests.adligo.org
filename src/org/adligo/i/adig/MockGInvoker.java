@@ -1,5 +1,8 @@
 package org.adligo.i.adig;
 
+import org.adligo.i.adig.client.BaseGInvoker;
+import org.adligo.i.adig.client.I_GInvoker;
+
 /**
  * this is what a impl should look like
  * 
