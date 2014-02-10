@@ -1,4 +1,4 @@
-package org.adligo.i.adig;
+package org.adligo.i.adig.tests;
 
 import org.adligo.i.adi.client.InvocationException;
 import org.adligo.i.adig.client.BaseGInvoker;
