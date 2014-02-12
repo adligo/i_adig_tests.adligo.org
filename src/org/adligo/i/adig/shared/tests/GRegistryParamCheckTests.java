@@ -1,4 +1,4 @@
-package org.adligo.i.adig.tests;
+package org.adligo.i.adig.shared.tests;
 
 import org.adligo.i.adig.client.GRegistry;
 import org.adligo.i.adig.client.I_GCheckedInvoker;
