@@ -1,7 +1,7 @@
 package org.adligo.i.adig_tests.shared;
 
-import org.adligo.i.adig.client.BaseGInvoker;
-import org.adligo.i.adig.client.I_GInvoker;
+import org.adligo.i.adig.shared.BaseGInvoker;
+import org.adligo.i.adig.shared.I_GInvoker;
 
 /**
  * this is what a impl should look like

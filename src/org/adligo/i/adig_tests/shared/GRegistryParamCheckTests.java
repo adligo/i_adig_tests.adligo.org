@@ -1,9 +1,9 @@
 package org.adligo.i.adig_tests.shared;
 
-import org.adligo.i.adig.client.GRegistry;
-import org.adligo.i.adig.client.I_GCheckedInvoker;
-import org.adligo.i.adig.client.I_GInvoker;
-import org.adligo.i.adig.client.InvokerRequestException;
+import org.adligo.i.adig.shared.GRegistry;
+import org.adligo.i.adig.shared.I_GCheckedInvoker;
+import org.adligo.i.adig.shared.I_GInvoker;
+import org.adligo.i.adig.shared.InvokerRequestException;
 import org.adligo.tests.ATest;
 
 public class GRegistryParamCheckTests extends ATest {
@@ -67,9 +67,9 @@ public class GRegistryParamCheckTests extends ATest {
 		}
 		assertEquals("Your call to the GRegistry's method " + 
 				GRegistry.GET_CHECKED_INVOKER_METHOD_NAME +" obtained a " +
-						"I_GCheckedInvoker<org.adligo.i.adig.tests.I_MockParam,org.adligo.i.adig.tests.I_MockReturn> " +
+						"I_GCheckedInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.I_MockReturn> " +
 						"which is not assignable to " +
-						"I_GCheckedInvoker<org.adligo.i.adig.tests.MockParam,org.adligo.i.adig.tests.I_MockReturn, " +
+						"I_GCheckedInvoker<org.adligo.i.adig_tests.shared.MockParam,org.adligo.i.adig_tests.shared.I_MockReturn, " +
 						"please fix your coding error or talk to your architect. ", 
 				x.getMessage() );
 		
@@ -85,9 +85,9 @@ public class GRegistryParamCheckTests extends ATest {
 		}
 		assertEquals("Your call to the GRegistry's method " + 
 				GRegistry.GET_CHECKED_INVOKER_METHOD_NAME +" obtained a " +
-						"I_GCheckedInvoker<org.adligo.i.adig.tests.I_MockParam,org.adligo.i.adig.tests.I_MockReturn> " +
+						"I_GCheckedInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.I_MockReturn> " +
 						"which is not assignable to " +
-						"I_GCheckedInvoker<org.adligo.i.adig.tests.I_MockParam,org.adligo.i.adig.tests.MockReturn, " +
+						"I_GCheckedInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.MockReturn, " +
 						"please fix your coding error or talk to your architect. ", 
 				x.getMessage() );
 		MockGRegistry.removeCheckedInvoker("somePlugin");
@@ -168,9 +168,9 @@ public class GRegistryParamCheckTests extends ATest {
 		}
 		assertEquals("Your call to the GRegistry's method " + 
 				GRegistry.GET_INVOKER_METHOD_NAME +" obtained a " +
-						"I_GInvoker<org.adligo.i.adig.tests.I_MockParam,org.adligo.i.adig.tests.I_MockReturn> " +
+						"I_GInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.I_MockReturn> " +
 						"which is not assignable to " +
-						"I_GInvoker<org.adligo.i.adig.tests.MockParam,org.adligo.i.adig.tests.I_MockReturn, " +
+						"I_GInvoker<org.adligo.i.adig_tests.shared.MockParam,org.adligo.i.adig_tests.shared.I_MockReturn, " +
 						"please fix your coding error or talk to your architect. ", 
 				x.getMessage() );
 		
@@ -186,9 +186,9 @@ public class GRegistryParamCheckTests extends ATest {
 		}
 		assertEquals("Your call to the GRegistry's method " + 
 				GRegistry.GET_INVOKER_METHOD_NAME +" obtained a " +
-						"I_GInvoker<org.adligo.i.adig.tests.I_MockParam,org.adligo.i.adig.tests.I_MockReturn> " +
+						"I_GInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.I_MockReturn> " +
 						"which is not assignable to " +
-						"I_GInvoker<org.adligo.i.adig.tests.I_MockParam,org.adligo.i.adig.tests.MockReturn, " +
+						"I_GInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.MockReturn, " +
 						"please fix your coding error or talk to your architect. ", 
 				x.getMessage() );
 		MockGRegistry.removeInvoker("somePlugin");

@@ -1,6 +1,7 @@
 package org.adligo.i.adig_tests.shared;
 
-import org.adligo.i.adig.client.GRegistry;
+import org.adligo.i.adig.shared.GRegistry;
+
 
 public class MockGRegistry extends GRegistry {
 
