@@ -1,4 +1,4 @@
-package org.adligo.i.adig.shared.tests;
+package org.adligo.i.adig_tests.shared;
 
 public class MockReturn implements I_MockReturn {
 	public static final Integer MOCK_RETURN = 1;

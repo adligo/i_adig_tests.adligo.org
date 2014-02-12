@@ -1,4 +1,4 @@
-package org.adligo.i.adig.shared.tests;
+package org.adligo.i.adig_tests.shared;
 
 import org.adligo.i.adig.client.BaseGInvoker;
 import org.adligo.i.adig.client.I_GInvoker;
