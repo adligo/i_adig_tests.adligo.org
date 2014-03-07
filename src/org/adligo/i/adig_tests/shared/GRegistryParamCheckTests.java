@@ -4,6 +4,7 @@ import org.adligo.i.adig.shared.GRegistry;
 import org.adligo.i.adig.shared.I_GCheckedInvoker;
 import org.adligo.i.adig.shared.I_GInvoker;
 import org.adligo.i.adig.shared.InvokerRequestException;
+import org.adligo.i.util_tests.utils.LineTextAssertions;
 import org.adligo.tests.ATest;
 
 public class GRegistryParamCheckTests extends ATest {
@@ -55,41 +56,47 @@ public class GRegistryParamCheckTests extends ATest {
 		
 		assertNotNull(theInvoker);
 		//yep sure did
-		x = null;
+		IllegalStateException s = null;
 		try {
 			@SuppressWarnings("unused")
 			I_GCheckedInvoker<MockParam, I_MockReturn>  theInvoker2 = 
 				GRegistry.getCheckedInvoker("somePlugin", MockParam.class, I_MockReturn.class);
 		} catch (Exception c) {
 			assertEquals("Should have thrown a InvokerRequestException", 
-					InvokerRequestException.class ,c.getClass() );
-			x = (InvokerRequestException) c;
+					IllegalStateException.class ,c.getClass() );
+			s = (IllegalStateException) c;
 		}
-		assertEquals("Your call to the GRegistry's method " + 
-				GRegistry.GET_CHECKED_INVOKER_METHOD_NAME +" obtained a " +
-						"I_GCheckedInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.I_MockReturn> " +
-						"which is not assignable to " +
-						"I_GCheckedInvoker<org.adligo.i.adig_tests.shared.MockParam,org.adligo.i.adig_tests.shared.I_MockReturn, " +
-						"please fix your coding error or talk to your architect. ", 
-				x.getMessage() );
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
+				"getCheckedInvoker(String key, Class param, Class return)\n" +
+				"with key;\n" +
+				"somePlugin\n" +
+				"had a param class;\n" +
+				"interface org.adligo.i.adig_tests.shared.I_MockParam\n" +
+				"and this parameter class is;\n" +
+				"null\n" +
+				"Please fix the code or talk to your architect.", 
+			s.getMessage(), this);
 		
-		x = null;
+		s = null;
 		try {
 			@SuppressWarnings("unused")
 			I_GCheckedInvoker<I_MockParam, MockReturn>  theInvoker2 = 
 				GRegistry.getCheckedInvoker("somePlugin", I_MockParam.class, MockReturn.class);
 		} catch (Exception c) {
 			assertEquals("Should have thrown a InvokerRequestException", 
-					InvokerRequestException.class ,c.getClass() );
-			x = (InvokerRequestException) c;
+					IllegalStateException.class ,c.getClass() );
+			s = (IllegalStateException) c;
 		}
-		assertEquals("Your call to the GRegistry's method " + 
-				GRegistry.GET_CHECKED_INVOKER_METHOD_NAME +" obtained a " +
-						"I_GCheckedInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.I_MockReturn> " +
-						"which is not assignable to " +
-						"I_GCheckedInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.MockReturn, " +
-						"please fix your coding error or talk to your architect. ", 
-				x.getMessage() );
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
+				"getCheckedInvoker(String key, Class param, Class return)\n" +
+				"with key;\n" +
+				"somePlugin\n" +
+				"had a return class;\n" +
+				"interface org.adligo.i.adig_tests.shared.I_MockReturn\n" +
+				"and this return class is;\n" +
+				"null\n" +
+				"Please fix the code or talk to your architect.", 
+			s.getMessage(), this);
 		MockGRegistry.removeCheckedInvoker("somePlugin");
 		
 		x = null;
@@ -156,41 +163,47 @@ public class GRegistryParamCheckTests extends ATest {
 		
 		assertNotNull(theInvoker);
 		//yep sure did
-		x = null;
+		IllegalStateException s = null;
 		try {
 			@SuppressWarnings("unused")
 			I_GInvoker<MockParam, I_MockReturn>  theInvoker2 = 
 				GRegistry.getInvoker("somePlugin", MockParam.class, I_MockReturn.class);
 		} catch (Exception c) {
 			assertEquals("Should have thrown a InvokerRequestException", 
-					InvokerRequestException.class ,c.getClass() );
-			x = (InvokerRequestException) c;
+					IllegalStateException.class ,c.getClass() );
+			s= (IllegalStateException) c;
 		}
-		assertEquals("Your call to the GRegistry's method " + 
-				GRegistry.GET_INVOKER_METHOD_NAME +" obtained a " +
-						"I_GInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.I_MockReturn> " +
-						"which is not assignable to " +
-						"I_GInvoker<org.adligo.i.adig_tests.shared.MockParam,org.adligo.i.adig_tests.shared.I_MockReturn, " +
-						"please fix your coding error or talk to your architect. ", 
-				x.getMessage() );
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
+					"getInvoker(String key, Class param, Class return)\n" +
+					"with key;\n" +
+					"somePlugin\n" +
+					"had a param class;\n" +
+					"interface org.adligo.i.adig_tests.shared.I_MockParam\n" +
+					"and this parameter class is;\n" +
+					"null\n" +
+					"Please fix the code or talk to your architect.", 
+				s.getMessage(), this);
 		
-		x = null;
+		s = null;
 		try {
 			@SuppressWarnings("unused")
 			I_GInvoker<I_MockParam, MockReturn>  theInvoker2 = 
 				GRegistry.getInvoker("somePlugin", I_MockParam.class, MockReturn.class);
 		} catch (Exception c) {
 			assertEquals("Should have thrown a InvokerRequestException", 
-					InvokerRequestException.class ,c.getClass() );
-			x = (InvokerRequestException) c;
+					IllegalStateException.class ,c.getClass() );
+			s = (IllegalStateException) c;
 		}
-		assertEquals("Your call to the GRegistry's method " + 
-				GRegistry.GET_INVOKER_METHOD_NAME +" obtained a " +
-						"I_GInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.I_MockReturn> " +
-						"which is not assignable to " +
-						"I_GInvoker<org.adligo.i.adig_tests.shared.I_MockParam,org.adligo.i.adig_tests.shared.MockReturn, " +
-						"please fix your coding error or talk to your architect. ", 
-				x.getMessage() );
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
+				"getInvoker(String key, Class param, Class return)\n" +
+				"with key;\n" +
+				"somePlugin\n" +
+				"had a return class;\n" +
+				"interface org.adligo.i.adig_tests.shared.I_MockReturn\n" +
+				"and this return class is;\n" +
+				"null\n" +
+				"Please fix the code or talk to your architect.", 
+			s.getMessage(), this);
 		MockGRegistry.removeInvoker("somePlugin");
 		
 		x = null;
