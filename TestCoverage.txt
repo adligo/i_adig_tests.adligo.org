@@ -1,3 +1,4 @@
 Date,Package,Coverage,Instructions
 11/14/2012,org.adligo.i.adig.client,66.8%,1163
 2/11/2014,org.adligo.i.adig.shared,66.8%,1163
+3/6/2014,org.adligo.i.adig.shared,65.8%,1045,172

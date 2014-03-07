@@ -1,14 +1,96 @@
-package org.adligo.i.adig_tests.shared;
+package org.adligo.i.adig_tests;
 
-import org.adligo.i.adig.shared.GRegistry;
-import org.adligo.i.adig.shared.I_GCheckedInvoker;
-import org.adligo.i.adig.shared.I_GInvoker;
-import org.adligo.i.adig.shared.InvokerRequestException;
-import org.adligo.i.util_tests.utils.LineTextAssertions;
+import org.adligo.i.adig_tests.shared.GRegistryAssertions;
 import org.adligo.tests.ATest;
+import org.adligo.tests.shared.AssertionStats;
+import org.junit.AfterClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
-public class GRegistryParamCheckTests extends ATest {
-
+@RunWith(JUnit4.class)
+public class GRegistryTests extends ATest {
+	private static GRegistryAssertions assertions = new GRegistryAssertions();
+	
+	@AfterClass
+	public static void afterClass() {
+		AssertionStats.logAssertionStats(GRegistryTests.class, assertions);
+	}
+	
+	public GRegistryTests() {
+		assertions.setTest(this);
+	}
+	
+	@Test
+	public void testGetInvokerParameterExceptions() {
+		assertions.getInvokerParameterExceptionsAssertions();
+	}
+	
+	@Test
+	public void testGetCheckedInvokerParameterExceptions() {
+		assertions.getCheckedInvokerParameterExceptionsAssertions();
+	}
+	
+	@Test
+	public void testAddAndGetSimpleCheckedInvokerAssertions() throws Exception {
+		assertions.addAndGetSimpleCheckedInvokerAssertions();
+	}
+	
+	@Test
+	public void testAddAndGetSimpleInvokerAssertions() throws Exception {
+		assertions.addAndGetSimpleInvokerAssertions();
+	}
+	
+	@Test
+	public void testGetAndAddSimpleCheckedInvokerAssertions() throws Exception {
+		assertions.getAndAddSimpleCheckedInvokerAssertions();
+	}
+	
+	@Test
+	public void testGetAndAddSimpleInvokerAssertions() throws Exception {
+		assertions.getAndAddSimpleCheckedInvokerAssertions();
+	}
+	
+	@Test
+	public void testGetAndGetSimpleCheckedInvokerMismatchAssertions() throws Exception {
+		assertions.getAndGetSimpleCheckedInvokerMismatchAssertions();
+	}
+	
+	@Test
+	public void testGetAndGetSimpleInvokerMismatchAssertions() throws Exception {
+		assertions.getAndGetSimpleInvokerMismatchAssertions();
+	}
+	
+	@Test
+	public void testAddAndGetSimpleInvokerMismatchAssertions() throws Exception {
+		assertions.addAndGetSimpleInvokerMismatchAssertions();
+	}
+	
+	@Test
+	public void testAddAndGetSimpleCheckedInvokerMismatchAssertions() throws Exception {
+		assertions.addAndGetSimpleCheckedInvokerMismatchAssertions();
+	}
+	
+	@Test
+	public void testGetAndAddSimpleInvokerParamMismatchAssertions() throws Exception {
+		assertions.getAndAddSimpleInvokerParamMismatchAssertions();
+	}
+	
+	@Test
+	public void testGetAndAddSimpleInvokerReturnMismatchAssertions() throws Exception {
+		assertions.getAndAddSimpleInvokerReturnMismatchAssertions();
+	}
+	
+	@Test
+	public void testGetAndAddSimpleCheckedInvokerParamMismatchAssertions() throws Exception {
+		assertions.getAndAddSimpleCheckedInvokerParamMismatchAssertions();
+	}
+	
+	@Test
+	public void testGetAndAddSimpleCheckedInvokerReturnMismatchAssertions() throws Exception {
+		assertions.getAndAddSimpleCheckedInvokerReturnMismatchAssertions();
+	}
+	/*
 	public void testGetCheckedInvoker() {
 		InvokerRequestException x = null;
 		
@@ -221,4 +303,6 @@ public class GRegistryParamCheckTests extends ATest {
 		GRegistry.addInvoker("somePlugin", new MockGInvokerWithImpls());
 		
 	}
+	8
+	*/
 }
