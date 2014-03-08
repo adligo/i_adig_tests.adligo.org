@@ -4,6 +4,7 @@ import org.adligo.i.adig.shared.GRegistry;
 import org.adligo.i.adig.shared.I_GCheckedInvoker;
 import org.adligo.i.adig.shared.I_GInvoker;
 import org.adligo.i.adig.shared.InitalProxyMarker;
+import org.adligo.i.util.shared.AppenderFactory;
 import org.adligo.i.util_tests.shared.utils.LineTextAssertions;
 import org.adligo.tests.shared.AAssertions;
 
@@ -145,14 +146,20 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"getAndGetSimpleInvokerMismatchAssertions\n" +
-				"had a param class;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockParam\n" +
-				"and this parameter class is;\n" +
-				"class java.lang.String\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"getAndGetSimpleInvokerMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a param class;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockParam" +
+				AppenderFactory.lineSeperator() + 
+				"and this parameter class is;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" +
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 		
@@ -168,14 +175,20 @@ public class GRegistryAssertions extends AAssertions {
 		cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"getAndGetSimpleInvokerMismatchAssertions\n" +
-				"had a return class;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockReturn\n" +
-				"and this return class is;\n" +
-				"class java.lang.String\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"getAndGetSimpleInvokerMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a return class;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockReturn" +
+				AppenderFactory.lineSeperator() + 
+				"and this return class is;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" +
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 	}
@@ -197,14 +210,20 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getCheckedInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"getAndGetSimpleCheckedInvokerMismatchAssertions\n" +
-				"had a param class;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockParam\n" +
-				"and this parameter class is;\n" +
-				"class java.lang.String\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" + 
+				AppenderFactory.lineSeperator() + 
+				"getCheckedInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"getAndGetSimpleCheckedInvokerMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a param class;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockParam" +
+				AppenderFactory.lineSeperator() + 
+				"and this parameter class is;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" + 
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 		
@@ -220,14 +239,20 @@ public class GRegistryAssertions extends AAssertions {
 		cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getCheckedInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"getAndGetSimpleCheckedInvokerMismatchAssertions\n" +
-				"had a return class;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockReturn\n" +
-				"and this return class is;\n" +
-				"class java.lang.String\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getCheckedInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"getAndGetSimpleCheckedInvokerMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a return class;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockReturn" +
+				AppenderFactory.lineSeperator() + 
+				"and this return class is;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" + 
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 	}
@@ -250,14 +275,20 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"addAndGetSimpleInvokerMismatchAssertions\n" +
-				"had a param class;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockParam\n" +
-				"and this parameter class is;\n" +
-				"class java.lang.String\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"addAndGetSimpleInvokerMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a param class;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockParam" +
+				AppenderFactory.lineSeperator() + 
+				"and this parameter class is;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" +
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 		
@@ -273,14 +304,20 @@ public class GRegistryAssertions extends AAssertions {
 		cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"addAndGetSimpleInvokerMismatchAssertions\n" +
-				"had a return class;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockReturn\n" +
-				"and this return class is;\n" +
-				"class java.lang.String\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"addAndGetSimpleInvokerMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a return class;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockReturn" +
+				AppenderFactory.lineSeperator() + 
+				"and this return class is;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" +
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 	}
@@ -302,14 +339,20 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getCheckedInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"addAndGetSimpleCheckedInvokerMismatchAssertions\n" +
-				"had a param class;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockParam\n" +
-				"and this parameter class is;\n" +
-				"class java.lang.String\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getCheckedInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"addAndGetSimpleCheckedInvokerMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a param class;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockParam" +
+				AppenderFactory.lineSeperator() + 
+				"and this parameter class is;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" +
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 		
@@ -325,14 +368,20 @@ public class GRegistryAssertions extends AAssertions {
 		cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getCheckedInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"addAndGetSimpleCheckedInvokerMismatchAssertions\n" +
-				"had a return class;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockReturn\n" +
-				"and this return class is;\n" +
-				"class java.lang.String\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getCheckedInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"addAndGetSimpleCheckedInvokerMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a return class;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockReturn" +
+				AppenderFactory.lineSeperator() + 
+				"and this return class is;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" +
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 	}
@@ -356,14 +405,20 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"getAndAddSimpleInvokerParamMismatchAssertions\n" +
-				"had a param class;\n" +
-				"class java.lang.String\n" +
-				"and this parameter class is;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockParam\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"getAndAddSimpleInvokerParamMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a param class;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" +
+				AppenderFactory.lineSeperator() + 
+				"and this parameter class is;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockParam" +
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 	}
@@ -386,14 +441,20 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"getAndAddSimpleInvokerReturnMismatchAssertions\n" +
-				"had a return class;\n" +
-				"class java.lang.String\n" +
-				"and this return class is;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockReturn\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"getAndAddSimpleInvokerReturnMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a return class;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" +
+				AppenderFactory.lineSeperator() + 
+				"and this return class is;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockReturn" +
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 	}
@@ -416,14 +477,20 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getCheckedInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"getAndAddSimpleCheckedInvokerParamMismatchAssertions\n" +
-				"had a param class;\n" +
-				"class java.lang.String\n" +
-				"and this parameter class is;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockParam\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getCheckedInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"getAndAddSimpleCheckedInvokerParamMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a param class;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" +
+				AppenderFactory.lineSeperator() + 
+				"and this parameter class is;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockParam" +
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 	}
@@ -446,14 +513,20 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method\n" +
-				"getCheckedInvoker(String key, Class param, Class return)\n" +
-				"with key;\n" +
-				"getAndAddSimpleCheckedInvokerReturnMismatchAssertions\n" +
-				"had a return class;\n" +
-				"class java.lang.String\n" +
-				"and this return class is;\n" +
-				"interface org.adligo.i.adig_tests.shared.I_MockReturn\n" +
+		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+				AppenderFactory.lineSeperator() + 
+				"getCheckedInvoker(String key, Class param, Class return) with key;" +
+				AppenderFactory.lineSeperator() + 
+				"getAndAddSimpleCheckedInvokerReturnMismatchAssertions" +
+				AppenderFactory.lineSeperator() + 
+				"had a return class;" +
+				AppenderFactory.lineSeperator() + 
+				"class java.lang.String" +
+				AppenderFactory.lineSeperator() + 
+				"and this return class is;" +
+				AppenderFactory.lineSeperator() + 
+				"interface org.adligo.i.adig_tests.shared.I_MockReturn" +
+				AppenderFactory.lineSeperator() + 
 				"Please fix the code or talk to your architect."
 				, caught.getMessage(), this);
 	}

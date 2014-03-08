@@ -1,6 +1,7 @@
 package org.adligo.i.adig_tests;
 
 import org.adligo.i.adig_tests.shared.GRegistryAssertions;
+import org.adligo.jse.util.JSECommonInit;
 import org.adligo.tests.ATest;
 import org.adligo.tests.shared.AssertionStats;
 import org.junit.AfterClass;
@@ -18,6 +19,7 @@ public class GRegistryTests extends ATest {
 	}
 	
 	public GRegistryTests() {
+		JSECommonInit.callLogDebug(GRegistryTests.class.getName());
 		assertions.setTest(this);
 	}
 	
