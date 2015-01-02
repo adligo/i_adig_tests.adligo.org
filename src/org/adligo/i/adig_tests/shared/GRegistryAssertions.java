@@ -10,10 +10,6 @@ import org.adligo.tests.shared.AAssertions;
 
 public class GRegistryAssertions extends AAssertions {
 
-	@Override
-	public String getPackage() {
-		return GRegistry.class.getPackage().getName();
-	}
 
 	
 	public void getInvokerParameterExceptionsAssertions() {
@@ -146,7 +142,7 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -175,7 +171,7 @@ public class GRegistryAssertions extends AAssertions {
 		cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -210,7 +206,7 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" + 
+		LineTextAssertions.equals("The inital call to the GRegistry's method" + 
 				AppenderFactory.lineSeperator() + 
 				"getCheckedInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -239,7 +235,7 @@ public class GRegistryAssertions extends AAssertions {
 		cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getCheckedInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -275,7 +271,7 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -304,7 +300,7 @@ public class GRegistryAssertions extends AAssertions {
 		cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -339,7 +335,7 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getCheckedInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -368,7 +364,7 @@ public class GRegistryAssertions extends AAssertions {
 		cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getCheckedInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -405,7 +401,7 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -441,7 +437,7 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -477,7 +473,7 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getCheckedInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 
@@ -513,7 +509,7 @@ public class GRegistryAssertions extends AAssertions {
 		Throwable cause = caught.getCause();
 		assertNotNull(cause);
 		assertEquals(InitalProxyMarker.class, cause.getClass());
-		LineTextAssertions.compaireFileText("The inital call to the GRegistry's method" +
+		LineTextAssertions.equals("The inital call to the GRegistry's method" +
 				AppenderFactory.lineSeperator() + 
 				"getCheckedInvoker(String key, Class param, Class return) with key;" +
 				AppenderFactory.lineSeperator() + 

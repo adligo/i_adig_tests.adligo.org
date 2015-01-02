@@ -3,8 +3,6 @@ package org.adligo.i.adig_tests;
 import org.adligo.i.adig_tests.shared.GRegistryAssertions;
 import org.adligo.jse.util.JSECommonInit;
 import org.adligo.tests.ATest;
-import org.adligo.tests.shared.AssertionStats;
-import org.junit.AfterClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -12,12 +10,7 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 public class GRegistryTests extends ATest {
 	private static GRegistryAssertions assertions = new GRegistryAssertions();
-	
-	@AfterClass
-	public static void afterClass() {
-		AssertionStats.logAssertionStats(GRegistryTests.class, assertions);
-	}
-	
+
 	public GRegistryTests() {
 		JSECommonInit.callLogDebug(GRegistryTests.class.getName());
 		assertions.setTest(this);
