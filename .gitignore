@@ -1,6 +1,7 @@
-bin/
-classes/
-classes_e/
+/bin/
+/build/
+/classes/
+/classes_e/
 i_adig_tests*.jar
 test_reports/
 test_failure.properties
